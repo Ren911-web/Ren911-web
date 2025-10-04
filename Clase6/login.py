@@ -25,7 +25,7 @@ def login(user, password):
 
     try:
         print("Verificar login")
-        if user == userLocal and apssword == passlocal:
+        if user == userLocal and password == passLocal:
             print("Login exitoso")
             accion="Succes"
         else:

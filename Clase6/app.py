@@ -4,6 +4,7 @@ from login import Login
 
 app = Flask(__name__)
 app.register_blueprint (Login)
+app.register_blueprint (Logout)
 @app.route('/')
 def home():
     return "Hola, Mundo. Usa ctrl + shift + i para acceder a la configuracion de la página"
