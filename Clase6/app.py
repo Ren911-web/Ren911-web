@@ -1,6 +1,6 @@
 from flask import Flask
 from login import Login
-
+from logout import Logout
 
 app = Flask(__name__)
 app.register_blueprint (Login)
