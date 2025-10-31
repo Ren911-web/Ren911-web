@@ -1,0 +1,147 @@
+!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Sobre nosotros</title>
+    <meta name="description" content="Conoce quiénes somos, nuestra misión, visión y valores." />
+    <style>
+        :root{
+            --accent:#2563eb;
+            --muted:#6b7280;
+            --bg:#f8fafc;
+            --card:#ffffff;
+            --radius:10px;
+            --maxw:1000px;
+            font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+            color:#0f172a;
+        }
+        body{margin:0;background:var(--bg);line-height:1.5}
+        .container{max-width:var(--maxw);margin:40px auto;padding:20px}
+        header{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+        header h1{font-size:1.1rem;margin:0}
+        nav a{color:var(--muted);text-decoration:none;margin-left:16px;font-size:.95rem}
+        .hero{display:grid;grid-template-columns:1fr;gap:18px;align-items:center;padding:26px;background:linear-gradient(180deg,rgba(37,99,235,0.06),transparent);border-radius:var(--radius)}
+        .hero h2{margin:0;font-size:1.6rem}
+        .hero p{margin:6px 0;color:var(--muted)}
+        .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:18px}
+        .card{background:var(--card);padding:16px;border-radius:10px;box-shadow:0 4px 18px rgba(2,6,23,0.06)}
+        .values{display:flex;gap:12px;flex-wrap:wrap}
+        .value{flex:1;min-width:150px;padding:12px;border-radius:8px;background:linear-gradient(90deg,rgba(37,99,235,0.03),transparent)}
+        .team{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
+        .person{display:flex;gap:12px;align-items:center}
+        .avatar{width:56px;height:56px;border-radius:12px;background:#e6eefc;display:inline-block;flex-shrink:0}
+        .muted{color:var(--muted);font-size:.95rem}
+        footer{margin-top:22px;padding:18px 0;text-align:center;color:var(--muted);font-size:.9rem}
+        .cta{display:inline-block;margin-top:12px;padding:10px 14px;background:var(--accent);color:#fff;border-radius:8px;text-decoration:none}
+        @media (max-width:800px){
+            .grid{grid-template-columns:1fr}
+            .team{grid-template-columns:1fr}
+            header{flex-direction:column;align-items:flex-start;gap:8px}
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>MiSitio</h1>
+            <nav aria-label="Navegación principal">
+                <a href="/">Inicio</a>
+                <a href="/about" aria-current="page">Sobre</a>
+                <a href="/contact">Contacto</a>
+            </nav>
+        </header>
+
+        <section class="hero" aria-labelledby="about-title">
+            <div>
+                <h2 id="about-title">Sobre nosotros</h2>
+                <p>Somos un equipo que crea soluciones digitales accesibles, enfocadas en impacto real y facilidad de uso.</p>
+                <p class="muted">Trabajamos con diseño centrado en la persona, buenas prácticas y entrega rápida.</p>
+                <a class="cta" href="/contact">Contáctanos</a>
+            </div>
+            <div>
+                <!-- Reemplaza la imagen por la tuya -->
+                <img src="/static/img/about-hero.png" alt="Equipo colaborando" style="width:100%;border-radius:10px;margin-top:8px;display:block">
+            </div>
+        </section>
+
+        <main>
+            <div class="grid" role="region" aria-label="Misión y visión">
+                <article class="card" aria-labelledby="mision">
+                    <h3 id="mision">Nuestra misión</h3>
+                    <p class="muted">Crear productos digitales que simplifiquen problemas reales y empoderen a las personas para alcanzar sus objetivos.</p>
+                </article>
+
+                <article class="card" aria-labelledby="vision">
+                    <h3 id="vision">Nuestra visión</h3>
+                    <p class="muted">Ser referente en soluciones accesibles, escalables y sostenibles en Latinoamérica.</p>
+                </article>
+
+                <section class="card" aria-labelledby="valores">
+                    <h3 id="valores">Valores</h3>
+                    <div class="values">
+                        <div class="value">
+                            <strong>Transparencia</strong>
+                            <div class="muted">Comunicación clara y decisiones basadas en datos.</div>
+                        </div>
+                        <div class="value">
+                            <strong>Empatía</strong>
+                            <div class="muted">Diseñamos con las personas en el centro.</div>
+                        </div>
+                        <div class="value">
+                            <strong>Calidad</strong>
+                            <div class="muted">Entrega responsable y mejoras continuas.</div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="card" aria-labelledby="historia">
+                    <h3 id="historia">Nuestra historia</h3>
+                    <p class="muted">Nacimos como un pequeño grupo de desarrolladores y diseñadores apasionados. Desde entonces hemos crecido colaborando con startups, ONG y empresas, manteniendo siempre el foco en impacto y usabilidad.</p>
+                </section>
+            </div>
+
+            <section class="card" aria-labelledby="equipo" style="margin-top:16px">
+                <h3 id="equipo">Equipo</h3>
+                <p class="muted">Un equipo multidisciplinar que combina diseño, ingeniería y estrategia.</p>
+
+                <div class="team" role="list">
+                    <div class="person" role="listitem">
+                        <div class="avatar" aria-hidden="true"></div>
+                        <div>
+                            <div><strong>Leandro Gonzalez</strong></div>
+                            <div class="muted">Diseñadora UX</div>
+                        </div>
+                    </div>
+
+                    <div class="person" role="listitem">
+                        <div class="avatar" aria-hidden="true"></div>
+                        <div>
+                            <div><strong>Leandro Gonzalez</strong></div>
+                            <div class="muted">Desarrollador Full‑Stack</div>
+                        </div>
+                    </div>
+
+                    <div class="person" role="listitem">
+                        <div class="avatar" aria-hidden="true"></div>
+                        <div>
+                            <div><strong>Leandro Gonzalez</strong></div>
+                            <div class="muted">Líder de Producto</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div>¿Quieres colaborar o aprender más? <a href="/contact">Escríbenos</a></div>
+            <div style="margin-top:8px">© <span id="year"></span> MiSitio</div>
+        </footer>
+    </div>
+
+    <script>
+        // Fecha dinámica para el pie
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
